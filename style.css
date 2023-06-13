@@ -1,7 +1,7 @@
 #header{
     background-color:darkcyan ;
-    margin-top: 50px;
-    margin-bottom:  50px;
+    margin-top: 5%;
+    margin-bottom:  5%;
     font-family: 'Hubballi', cursive;
 }
 body{
@@ -9,7 +9,8 @@ body{
 }
 #nameAndTitle{
     background-color:rgb(250, 244, 237);
-    width: 500px;
+    width: 80%;
+    max-width: 500px;
     margin: 0 auto;
     text-align: center;
 }
@@ -19,22 +20,13 @@ body{
 h1, h2, h3{
     text-transform: uppercase;
 }
+
 #contact{
     list-style-type: none;
 }
 #contact i{
-    width: 30px;
+    width: 5vw;
     color:darkcyan;
-}
-#container{
-    display: grid;
-    grid-template-columns: 30% auto;
-    grid-column-gap: 20px;
-}
-#sidebar, #content{
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
 }
 .card h3{
     font-family: 'Hubballi', cursive;
@@ -44,4 +36,33 @@ h1, h2, h3{
     border: 1px solid rgb(196, 194, 194);
     border-radius: 15px;
     padding: 20px;
+}
+@media screen and (max-width: 768px) {
+    #container {
+        display: block;
+    }
+
+    #sidebar,
+    #content {
+        margin: 0;
+    }
+
+    #sidebar .card,
+    #content .card {
+        margin-bottom: 20px;
+    }
+}
+@media screen and (min-width: 768px) {
+    #container {
+        display: grid;
+        grid-template-columns: 30% auto;
+        grid-column-gap: 2vw;
+    }
+
+    #sidebar,
+    #content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+    }
 }
